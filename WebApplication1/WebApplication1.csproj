@@ -205,6 +205,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\convertfileModel.cs" />
     <Compile Include="Models\FileHelper.cs" />
     <Compile Include="Models\HttpHelper.cs" />
     <Compile Include="Models\v1_3rd.cs" />

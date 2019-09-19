@@ -34,14 +34,33 @@ namespace WebApplication1.Controllers
 
         #endregion
 
+        #region xconvert 已弃用
+        /// <summary>
+        /// 文档转PDF
+        /// </summary>
+        /// <returns></returns>
+        [Obsolete("已弃用")]
+        public ActionResult convertfileDemo()
+        {
+            Models.convertfileModel model = new Models.convertfileModel();
+            model.name = "20181220A.txt";
+            model.url = "http://xxh.cn/wpspreview/Content/20181220A.txt";
+            model.pass = "";
+            model.callback = "http://xxh.cn/wpspreview/Home/callbackForConvertfile";
 
-        #region xconvert 已废弃
+            string result = Models.HttpHelper.SendHttpRequest("http://10.13.83.54:20883/v1/convertfile", "POST", model.ToJson());
+            LogHelper.Save(string.Format("convertfileDemo > result={0}", result), nameof(HomeController), LogType.Report, LogTime.hour);
+
+            return Content(result);
+        }
+        
         /// <summary>
         /// http://xxh.cn/wpspreview/Home/callbackForConvertfile
         /// 
         /// http://192.168.10.250:20883/v1/file?sha1=3266d3b7ffb37a5b130c84644b489baee940a36e
         /// </summary>
         /// <returns></returns>
+        [Obsolete("已弃用")]
         public ActionResult callbackForConvertfile()
         {
             var request = System.Web.HttpContext.Current.Request;
