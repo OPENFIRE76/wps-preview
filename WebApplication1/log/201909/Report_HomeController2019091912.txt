@@ -1,0 +1,32 @@
+>>>>>>>>新文件，第一次开始>>>>>>>>
+2019-09-19 12:15:30 >
+fileinfo > Url=http://xxh.cn/wpspreview/v1/3rd/fileinfo?fname=20181220C.txt&operationtype=preview，ip=10.13.83.54，HttpMethod=GET，ContentType=
+
+2019-09-19 12:15:30 >
+fileinfo > Url=http://xxh.cn/wpspreview/v1/3rd/fileinfo?fname=20181220C.txt&operationtype=preview，ip=10.13.83.54，HttpMethod=GET，ContentType=
+
+2019-09-19 12:15:30 >
+notify > Url=http://xxh.cn/wpspreview/v1/3rd/notify，ip=10.13.83.54，HttpMethod=POST，ContentType=application/json
+
+2019-09-19 12:15:30 >
+notify > Url=http://xxh.cn/wpspreview/v1/3rd/notify，ip=10.13.83.54，HttpMethod=POST，ContentType=application/json，postStr={"cmd":"downloadFileNotify","data":{"duration":595,"error":"成功","fname":"20181220C.txt","uniqueId":"07b10f8ab82287f14f7d50d12eb882ad56ac4b6b","url":"http://xxh.cn/wpspreview/Content/20181220C.txt"}}
+
+2019-09-19 12:15:38 >
+文档下载通知：notify > postStr={"cmd":"downloadFileNotify","data":{"duration":595,"error":"成功","fname":"20181220C.txt","uniqueId":"07b10f8ab82287f14f7d50d12eb882ad56ac4b6b","url":"http://xxh.cn/wpspreview/Content/20181220C.txt"}}
+
+>>>>>>>>第二次开始>>>>>>>>
+
+2019-09-19 12:17:26 >
+fileinfo > Url=http://xxh.cn/wpspreview/v1/3rd/fileinfo?fname=20181220C.txt&operationtype=preview，ip=10.13.83.54，HttpMethod=GET，ContentType=
+
+2019-09-19 12:17:26 >
+notify > Url=http://xxh.cn/wpspreview/v1/3rd/notify?fname=20181220C.txt&operationtype=preview，ip=10.13.83.54，HttpMethod=POST，ContentType=application/json
+
+2019-09-19 12:17:26 >
+notify > Url=http://xxh.cn/wpspreview/v1/3rd/notify?fname=20181220C.txt&operationtype=preview，ip=10.13.83.54，HttpMethod=POST，ContentType=application/json，postStr={"cmd":"viewNotify","data":{"error":"成功","fname":"20181220C.txt","uniqueId":"07b10f8ab82287f14f7d50d12eb882ad56ac4b6b"}}
+
+2019-09-19 12:17:32 >
+文档预览通知：notify > postStr={"cmd":"viewNotify","data":{"error":"成功","fname":"20181220C.txt","uniqueId":"07b10f8ab82287f14f7d50d12eb882ad56ac4b6b"}}
+
+>>>>>>>>第三次开始……>>>>>>>>
+

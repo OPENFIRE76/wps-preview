@@ -1,0 +1,87 @@
+2018-12-24 15:35:22 >
+fileinfo > Url=http://192.168.43.28/wpsxview/v1/3rd/fileinfo?fname=20181220A.txt&operationtype=preview，ip=192.168.10.250，HttpMethod=GET，ContentType=
+
+2018-12-24 15:35:22 >
+notify > Url=http://192.168.43.28/wpsxview/v1/3rd/notify?fname=20181220A.txt&operationtype=preview，ip=192.168.10.250，HttpMethod=POST，ContentType=application/json
+
+2018-12-24 15:35:22 >
+notify > Url=http://192.168.43.28/wpsxview/v1/3rd/notify?fname=20181220A.txt&operationtype=preview，ip=192.168.10.250，HttpMethod=POST，ContentType=application/json，postStr={"cmd":"viewNotify","data":{"fname":"20181220A.txt","uniqueId":"3266d3b7ffb37a5b130c84644b489baee940a36e"}}
+
+2018-12-24 15:35:22 >
+notify > Url=http://192.168.43.28/wpsxview/v1/3rd/notify，ip=192.168.10.250，HttpMethod=POST，ContentType=application/json
+
+2018-12-24 15:35:22 >
+notify > Url=http://192.168.43.28/wpsxview/v1/3rd/notify，ip=192.168.10.250，HttpMethod=POST，ContentType=application/json，postStr={"cmd":"downloadFileNotify","data":{"duration":63,"fname":"20181220A.txt","uniqueId":"3266d3b7ffb37a5b130c84644b489baee940a36e","url":"http://192.168.43.28/wpsxview/Content/20181220A.txt"}}
+
+2018-12-24 15:35:23 >
+notify > Url=http://192.168.43.28/wpsxview/v1/3rd/notify，ip=192.168.10.250，HttpMethod=POST，ContentType=application/json
+
+2018-12-24 15:35:23 >
+notify > Url=http://192.168.43.28/wpsxview/v1/3rd/notify，ip=192.168.10.250，HttpMethod=POST，ContentType=application/json，postStr={"cmd":"convertNotify","data":{"duration":1082,"error":"","fname":"20181220A.txt","fp1CostTime":452,"resultCode":0,"scode":0,"totalTime":1083,"uniqueId":"3266d3b7ffb37a5b130c84644b489baee940a36e"}}
+
+2018-12-24 15:37:24 >
+fileinfo > Url=http://192.168.43.28/wpsxview/v1/3rd/fileinfo?fname=20181220A.txt&operationtype=preview，ip=192.168.10.250，HttpMethod=GET，ContentType=
+
+2018-12-24 15:37:24 >
+notify > Url=http://192.168.43.28/wpsxview/v1/3rd/notify?fname=20181220A.txt&operationtype=preview，ip=192.168.10.250，HttpMethod=POST，ContentType=application/json
+
+2018-12-24 15:37:24 >
+notify > Url=http://192.168.43.28/wpsxview/v1/3rd/notify?fname=20181220A.txt&operationtype=preview，ip=192.168.10.250，HttpMethod=POST，ContentType=application/json，postStr={"cmd":"viewNotify","data":{"fname":"20181220A.txt","uniqueId":"3266d3b7ffb37a5b130c84644b489baee940a36e"}}
+
+2018-12-24 15:37:28 >
+fileinfo > Url=http://192.168.43.28/wpsxview/v1/3rd/fileinfo?fname=20181220A.txt&operationtype=preview，ip=192.168.10.250，HttpMethod=GET，ContentType=
+
+2018-12-24 15:37:28 >
+notify > Url=http://192.168.43.28/wpsxview/v1/3rd/notify?fname=20181220A.txt&operationtype=preview，ip=192.168.10.250，HttpMethod=POST，ContentType=application/json
+
+2018-12-24 15:37:28 >
+notify > Url=http://192.168.43.28/wpsxview/v1/3rd/notify?fname=20181220A.txt&operationtype=preview，ip=192.168.10.250，HttpMethod=POST，ContentType=application/json，postStr={"cmd":"viewNotify","data":{"fname":"20181220A.txt","uniqueId":"3266d3b7ffb37a5b130c84644b489baee940a36e"}}
+
+2018-12-24 15:37:33 >
+fileinfo > Url=http://192.168.43.28/wpsxview/v1/3rd/fileinfo?fname=20181220A.txt&operationtype=preview，ip=192.168.10.250，HttpMethod=GET，ContentType=
+
+2018-12-24 15:37:33 >
+notify > Url=http://192.168.43.28/wpsxview/v1/3rd/notify?fname=20181220A.txt&operationtype=preview，ip=192.168.10.250，HttpMethod=POST，ContentType=application/json
+
+2018-12-24 15:37:33 >
+notify > Url=http://192.168.43.28/wpsxview/v1/3rd/notify?fname=20181220A.txt&operationtype=preview，ip=192.168.10.250，HttpMethod=POST，ContentType=application/json，postStr={"cmd":"viewNotify","data":{"fname":"20181220A.txt","uniqueId":"3266d3b7ffb37a5b130c84644b489baee940a36e"}}
+
+2018-12-24 15:37:40 >
+fileinfo > Url=http://192.168.43.28/wpsxview/v1/3rd/fileinfo?fname=20181220A.txt&operationtype=preview，ip=192.168.10.250，HttpMethod=GET，ContentType=
+
+2018-12-24 15:37:40 >
+notify > Url=http://192.168.43.28/wpsxview/v1/3rd/notify?fname=20181220A.txt&operationtype=preview，ip=192.168.10.250，HttpMethod=POST，ContentType=application/json
+
+2018-12-24 15:37:40 >
+notify > Url=http://192.168.43.28/wpsxview/v1/3rd/notify?fname=20181220A.txt&operationtype=preview，ip=192.168.10.250，HttpMethod=POST，ContentType=application/json，postStr={"cmd":"viewNotify","data":{"fname":"20181220A.txt","uniqueId":"3266d3b7ffb37a5b130c84644b489baee940a36e"}}
+
+2018-12-24 15:50:14 >
+fileinfo > Url=http://192.168.43.28/wpsxview/v1/3rd/fileinfo?fname=20181220A.txt&operationtype=preview，ip=192.168.10.250，HttpMethod=GET，ContentType=
+
+2018-12-24 15:50:14 >
+notify > Url=http://192.168.43.28/wpsxview/v1/3rd/notify?fname=20181220A.txt&operationtype=preview，ip=192.168.10.250，HttpMethod=POST，ContentType=application/json
+
+2018-12-24 15:50:14 >
+notify > Url=http://192.168.43.28/wpsxview/v1/3rd/notify?fname=20181220A.txt&operationtype=preview，ip=192.168.10.250，HttpMethod=POST，ContentType=application/json，postStr={"cmd":"viewNotify","data":{"fname":"20181220A.txt","uniqueId":"3266d3b7ffb37a5b130c84644b489baee940a36e"}}
+
+2018-12-24 15:50:14 >
+notify > Url=http://192.168.43.28/wpsxview/v1/3rd/notify，ip=192.168.10.250，HttpMethod=POST，ContentType=application/json
+
+2018-12-24 15:50:14 >
+notify > Url=http://192.168.43.28/wpsxview/v1/3rd/notify，ip=192.168.10.250，HttpMethod=POST，ContentType=application/json，postStr={"cmd":"downloadFileNotify","data":{"duration":80,"fname":"20181220A.txt","uniqueId":"3266d3b7ffb37a5b130c84644b489baee940a36e","url":"http://192.168.43.28/wpsxview/Content/20181220A.txt"}}
+
+2018-12-24 15:50:15 >
+notify > Url=http://192.168.43.28/wpsxview/v1/3rd/notify，ip=192.168.10.250，HttpMethod=POST，ContentType=application/json
+
+2018-12-24 15:50:15 >
+notify > Url=http://192.168.43.28/wpsxview/v1/3rd/notify，ip=192.168.10.250，HttpMethod=POST，ContentType=application/json，postStr={"cmd":"convertNotify","data":{"duration":648,"error":"","fname":"20181220A.txt","fp1CostTime":156,"resultCode":0,"scode":0,"totalTime":651,"uniqueId":"3266d3b7ffb37a5b130c84644b489baee940a36e"}}
+
+2018-12-24 15:50:16 >
+fileinfo > Url=http://192.168.43.28/wpsxview/v1/3rd/fileinfo?fname=20181220A.txt&operationtype=preview，ip=192.168.10.250，HttpMethod=GET，ContentType=
+
+2018-12-24 15:50:16 >
+notify > Url=http://192.168.43.28/wpsxview/v1/3rd/notify?fname=20181220A.txt&operationtype=preview，ip=192.168.10.250，HttpMethod=POST，ContentType=application/json
+
+2018-12-24 15:50:16 >
+notify > Url=http://192.168.43.28/wpsxview/v1/3rd/notify?fname=20181220A.txt&operationtype=preview，ip=192.168.10.250，HttpMethod=POST，ContentType=application/json，postStr={"cmd":"viewNotify","data":{"fname":"20181220A.txt","uniqueId":"3266d3b7ffb37a5b130c84644b489baee940a36e"}}
+
