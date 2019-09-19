@@ -23,6 +23,12 @@ namespace WebApplication1.Controllers
         在线预览页面（最终预览效果）：
         http://192.168.10.250:8237/v1/view/preview
 
+        示例：
+        http://10.13.83.54:8237/v1/view/preview?fname=111.xls&sheetIndex=0
+        http://10.13.83.54:8237/v1/view/preview?fname=111.doc&pageIndex=0
+        http://10.13.83.54:8237/v1/view/preview?fname=111.ppt&pageIndex=2
+
+
         某文件转换状态：
         http://192.168.10.250:8237/v1/view/status
 

@@ -231,6 +231,9 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\111.xls" />
+    <Content Include="Content\111.doc" />
+    <Content Include="Content\111.ppt" />
     <None Include="Properties\PublishProfiles\wpsxview_3rd.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

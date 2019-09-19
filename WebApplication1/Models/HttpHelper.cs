@@ -30,13 +30,16 @@ namespace WebApplication1.Models
             Stream newStream = myRequest.GetRequestStream();
             newStream.Write(buf, 0, buf.Length);
             newStream.Close();
+            newStream.Dispose();
 
             //获得接口返回值
             HttpWebResponse myResponse = (HttpWebResponse)myRequest.GetResponse();
             StreamReader reader = new StreamReader(myResponse.GetResponseStream(), Encoding.UTF8);
             string ReqResult = reader.ReadToEnd();
             reader.Close();
+            reader.Dispose();
             myResponse.Close();
+
             return ReqResult;
         }
 
