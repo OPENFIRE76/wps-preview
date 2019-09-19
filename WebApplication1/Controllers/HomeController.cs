@@ -20,13 +20,20 @@ namespace WebApplication1.Controllers
         /*
         请求预览地址（预转换地址）：
         http://192.168.10.250:8237/v1/view
-        某文件转换状态：
-        http://192.168.10.250:8237/v1/view/status
         在线预览页面（最终预览效果）：
         http://192.168.10.250:8237/v1/view/preview
+
+        某文件转换状态：
+        http://192.168.10.250:8237/v1/view/status
+
+        数据采集接口：
+        http://192.168.10.250:8237/v1/view/workstatus?starttime=2019-01-01&endtime=2020-01-01
+
+        
          */
 
         #endregion
+
 
         #region xconvert 已废弃
         /// <summary>

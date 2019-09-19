@@ -5,18 +5,25 @@
 <div class="jumbotron">
     <h1>WPS 在线预览</h1>
     <p class="lead">这是一个在线预览对接项目示例</p>
-    <p><a href="@(ViewBag.ServerUrlPrefix + "/v1/view/preview?fname=20181220C.txt")" class="btn btn-primary btn-lg" target="_blank">点击预览 &raquo;</a></p>
+    <p>
+        <a href="@(ViewBag.ServerUrlPrefix + "/v1/view/preview?fname=20181220A.txt")" class="btn btn-primary btn-lg" target="_blank">立即预览 &raquo;</a>
+        <a href="@(ViewBag.ServerUrlPrefix + "/v1/view?fname=20181220A.txt")" class="btn btn-primary btn-lg" target="_blank">预览地址 &raquo;</a>
+        <a href="@(ViewBag.ServerUrlPrefix + "/v1/view/workstatus")" class="btn btn-primary btn-lg" target="_blank">数据采集 &raquo;</a>
+    </p>
 </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
+        <h2>在线预览</h2>
         <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            预览请求有两种：
+            1，是请求预览页面（适用于小文档或已经预览过的文档）；
+            2，是预转换，后台请求预览地址（用于需要提前将文件预览地址准备好的场景）；
         </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <p>
+            <a class="btn btn-default" href="@(ViewBag.ServerUrlPrefix + "/v1/view/preview?fname=20181220A.txt")" target="_blank">预览页面 &raquo;</a>
+            <a class="btn btn-default" href="@(ViewBag.ServerUrlPrefix + "/v1/view?fname=20181220A.txt")" target="_blank">预览地址 &raquo;</a>
+        </p>
     </div>
     <div class="col-md-4">
         <h2>Get more libraries</h2>
