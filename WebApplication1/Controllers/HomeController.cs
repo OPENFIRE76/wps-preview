@@ -11,7 +11,7 @@ namespace WebApplication1.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.ServerUrlPrefix = ConfigHelper.GetAppSetting("ServerUrlPrefix");
+            ViewBag.ServerPreviewUrlPrefix = ConfigHelper.GetAppSetting("ServerPreviewUrlPrefix");
 
             return View();
         }

@@ -201,6 +201,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\officeDController.cs" />
     <Compile Include="Controllers\v1_3rdController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -208,6 +209,7 @@
     <Compile Include="Models\convertfileModel.cs" />
     <Compile Include="Models\FileHelper.cs" />
     <Compile Include="Models\HttpHelper.cs" />
+    <Compile Include="Models\officeD.cs" />
     <Compile Include="Models\v1_3rd.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
