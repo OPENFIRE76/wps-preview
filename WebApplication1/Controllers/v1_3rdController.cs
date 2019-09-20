@@ -54,7 +54,7 @@ namespace WebApplication1.Controllers
                     */
                     fileinfo.uniqueId = Models.FileHelper.GetSHA1(fpath);
                     fileinfo.fname = fname;
-                    fileinfo.getFileWay = "download";
+                    fileinfo.getFileWay = "download"; // 本demo仅支持：localfile, download
                     fileinfo.url = "http://xxh.cn/wpspreview/Content/" + fname;
                     fileinfo.watermarksetting = new Models.WatermarkSetting()
                     {
