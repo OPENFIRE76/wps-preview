@@ -54,7 +54,7 @@ namespace WebApplication1.Controllers
             model.pass = "";
             model.callback = "http://xxh.cn/wpspreview/Home/callbackForConvertfile";
 
-            string result = Models.HttpHelper.SendHttpRequest("http://10.13.83.54:20883/v1/convertfile", "POST", model.ToJson());
+            string result = Models.HttpHelper.HttpPost("http://10.13.83.54:20883/v1/convertfile", model.ToJson(), "application/json");
             LogHelper.Save(string.Format("convertfileDemo > result={0}", result), nameof(HomeController), LogType.Report, LogTime.hour);
 
             return Content(result);
