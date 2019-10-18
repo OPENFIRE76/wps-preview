@@ -13,6 +13,11 @@ namespace WebApplication1.Controllers
     public class officeDController : Controller
     {
         // GET: officeD
+
+        /// <summary>
+        /// demo演示根据文件名调用转换PDF
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Index()
         {
             return View();
@@ -25,7 +30,7 @@ namespace WebApplication1.Controllers
          */
 
         /// <summary>
-        /// demo演示根据文件名调用转换PDF
+        /// 第一步，创建session获取sessionId
         /// </summary>
         /// <param name="fname"></param>
         /// <returns></returns>
@@ -56,6 +61,10 @@ namespace WebApplication1.Controllers
             return Content(result);
         }
 
+        /// <summary>
+        /// 第二步，根据sessionId执行操作
+        /// </summary>
+        /// <param name="SessionId"></param>
         private void OperateSession(string SessionId)
         {
             if(null == SessionId || SessionId.Length < 36)
@@ -92,7 +101,7 @@ namespace WebApplication1.Controllers
         }
 
         /// <summary>
-        /// 根据SessionId获取转换结果
+        /// 第三步，根据SessionId获取转换结果
         /// </summary>
         /// <param name="SessionId"></param>
         private void GetContentSession(string SessionId)
