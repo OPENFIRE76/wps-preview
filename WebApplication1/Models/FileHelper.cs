@@ -6,7 +6,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Web;
 
-namespace WebApplication1.Models
+namespace wpsPreview.Models
 {
     public class FileHelper
     {

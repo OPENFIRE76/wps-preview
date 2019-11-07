@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace WebApplication1.Controllers
+namespace wpsPreview.Controllers
 {
     /// <summary>
     /// 3.6.100以上才支持officeD，原来的xconvert将不在支持。

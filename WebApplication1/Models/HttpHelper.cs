@@ -5,7 +5,7 @@ using System.Net;
 using System.Text;
 
 
-namespace WebApplication1.Models
+namespace wpsPreview.Models
 {
     public class HttpHelper
     {

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace WebApplication1.Controllers
+namespace wpsPreview.Controllers
 {
     /// <summary>
     /// 客户要实现的对接模块（即2个接口）
