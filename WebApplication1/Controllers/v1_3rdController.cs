@@ -112,6 +112,36 @@ namespace wpsPreview.Controllers
         */
         #endregion
 
+        #region POST方式
+        //POST方式 ：http://10.13.83.54:8237/v1/view/preview?showcomments=true&fname=20191111A.txt
+        /*body内容：
+{
+  "password": "",
+  "fileInfo3rd": {
+    "uniqueId": "20191111A",
+    "fname": "20191111A.txt",
+    "getFileWay": "download",
+    "url": "http://xxh.cn/wpspreview/Content/20191111A.txt",
+    "enableCopy": true,
+    "watermarkType": 1,
+    "watermark": "啦啦啦啦啦",
+    "watermarkSetting": {
+      "width": 195,
+      "height": 170,
+      "fillstyle": "rgba( 192, 192, 192, 0.6 )",
+      "font": "bold 20px Serif",
+      "rotate": 45
+    },
+    "enablePrint": true,
+    "enableScreenShot": true,
+    "size": 100
+  }
+}
+         */
+
+        #endregion
+
+
         /// <summary>
         /// 消息通知回调
         /// 调用方法：POST
