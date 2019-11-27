@@ -201,4 +201,135 @@ namespace wpsPreview.Models
         public int totalTime { get; set; }
     }
 
+
+    #region POST方式预览
+    /// <summary>
+    /// POST方式预览json模型
+    /// </summary>
+    public class postPreview
+    {
+        /// <summary>
+        /// 文档密码
+        /// </summary>
+        public string password { get; set; }
+        /// <summary>
+        /// 文档元数据信息
+        /// </summary>
+        public fileInfo3rd fileInfo3rd { get; set; }
+
+        /// <summary>
+        /// 构造函数设置默认值
+        /// </summary>
+        public postPreview()
+        {
+            fileInfo3rd = new fileInfo3rd();
+        }
+
+    }
+
+    /// <summary>
+    /// 文件信息
+    /// </summary>
+    public class fileInfo3rd
+    {
+        /// <summary>
+        /// 文档唯一id，建议用文档sha1，预览服务通过这个id来判断预览文件是否已经生成。必须返回。
+        /// </summary>
+        public string uniqueId { get; set; }
+        /// <summary>
+        /// 文件的名字，包含后缀，预览服务根据文档名的后缀来判断是否支持此文档的预览。必须返回。
+        /// </summary>
+        public string fname { get; set; }
+        /// <summary>
+        /// 获取文档的方式，目前支持三种：localfile, localfilewait, download。必须返回。
+        /// </summary>
+        public string getFileWay { get; set; }
+        /// <summary>
+        /// 当获取方式为localfile、download时，表示文档的本地路径或下载地址
+        /// </summary>
+        public string url { get; set; }
+        /// <summary>
+        /// 是否可复制，默认为true
+        /// </summary>
+        public bool enableCopy { get; set; }
+        /// <summary>
+        /// 是否有水印，0:无水印 1：字符串水印  2：图片水印
+        /// </summary>
+        public int watermarkType { get; set; }
+        /// <summary>
+        /// watermarkType为1：水印字符串  2：图片的url地址
+        /// </summary>
+        public string watermark { get; set; }
+        /// <summary>
+        /// json结构体，水印相关设置，可选
+        /// </summary>
+        public WatermarkSetting watermarkSetting { get; set; }
+        /// <summary>
+        /// 是否可打印
+        /// </summary>
+        public bool enablePrint { get; set; }
+        /// <summary>
+        /// 是否可截屏
+        /// </summary>
+        public bool enableScreenShot { get; set; }
+        /// <summary>
+        /// 文件大小
+        /// </summary>
+        public int size { get; set; }
+        /// <summary>
+        /// 根据url下载文档时，可设置根据需要添加响应头
+        /// </summary>
+        public string[] downloadheader { get; set; }
+
+        /// <summary>
+        /// 构造函数设置默认值
+        /// </summary>
+        public fileInfo3rd()
+        {
+            enableCopy = true;
+            enablePrint = true;
+            enableScreenShot = true;
+
+            getFileWay = "download";
+            watermarkType = 1;
+            watermark = "金山WPS在线预览";
+            watermarkSetting = new WatermarkSetting();
+        }
+
+        /// <summary>
+        /// 序列化成Json字符串
+        /// </summary>
+        /// <returns></returns>
+        public bool ValidateEntity()
+        {
+            if(string.IsNullOrWhiteSpace(fname) || !System.IO.Path.HasExtension(fname))
+            {
+                throw new Exception("文件的名字包含后缀，预览服务根据文档名的后缀来判断是否支持此文档的预览。必须返回。");
+            }
+            if(string.IsNullOrWhiteSpace(getFileWay) || !("localfile" == getFileWay || "localfilewait" == getFileWay || "download" == getFileWay))
+            {
+                throw new Exception("获取文档的方式，目前支持三种：localfile, localfilewait, download。必须返回。");
+            }
+            if("localfile" == getFileWay && (string.IsNullOrWhiteSpace(url) || url.ToLower().IndexOf(":\\") != 1))
+            {
+                throw new Exception("当获取方式为localfile、download时，表示文档的本地路径或下载地址");
+            }
+            else if("download" == getFileWay && (string.IsNullOrWhiteSpace(url) || (url.ToLower().IndexOf("http://") != 0 && url.ToLower().IndexOf("https://") != 0)))
+            {
+                throw new Exception("当获取方式为localfile、download时，表示文档的本地路径或下载地址");
+            }
+            if(!(0 == watermarkType || 1 == watermarkType || 2 == watermarkType))
+            {
+                throw new Exception("是否有水印，0:无水印 1：字符串水印  2：图片水印");
+            }
+            else if(2 == watermarkType && (string.IsNullOrWhiteSpace(watermark) || (watermark.ToLower().IndexOf("http://") != 0 && watermark.ToLower().IndexOf("https://") != 0)))
+            {
+                throw new Exception("当 watermarkType是2时，watermark是图片的url地址");
+            }
+
+            return true;
+        }
+    }
+    #endregion
+
 }

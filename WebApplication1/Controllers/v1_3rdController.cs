@@ -1,7 +1,10 @@
 ﻿using ClassLib4Net;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Text;
 using System.Web;
 using System.Web.Mvc;
 
@@ -112,35 +115,6 @@ namespace wpsPreview.Controllers
         */
         #endregion
 
-        #region POST方式
-        //POST方式 ：http://10.13.83.54:8237/v1/view/preview?showcomments=true&fname=20191111A.txt
-        /*body内容：
-{
-  "password": "",
-  "fileInfo3rd": {
-    "uniqueId": "20191111A",
-    "fname": "20191111A.txt",
-    "getFileWay": "download",
-    "url": "http://xxh.cn/wpspreview/Content/20191111A.txt",
-    "enableCopy": true,
-    "watermarkType": 1,
-    "watermark": "啦啦啦啦啦",
-    "watermarkSetting": {
-      "width": 195,
-      "height": 170,
-      "fillstyle": "rgba( 192, 192, 192, 0.6 )",
-      "font": "bold 20px Serif",
-      "rotate": 45
-    },
-    "enablePrint": true,
-    "enableScreenShot": true,
-    "size": 100
-  }
-}
-         */
-
-        #endregion
-
 
         /// <summary>
         /// 消息通知回调
@@ -208,6 +182,97 @@ namespace wpsPreview.Controllers
 
             return Json(new { resultCode = 0, msg = "ok" }, JsonRequestBehavior.DenyGet);
         }
+
+
+
+
+        #region POST方式
+        //POST方式 ：http://10.13.83.54:8237/v1/view/preview?showcomments=true&fname=20191111A.txt
+        /*body内容：
+{
+  "password": "",
+  "fileInfo3rd": {
+    "uniqueId": "20191111A",
+    "fname": "20191111A.txt",
+    "getFileWay": "download",
+    "url": "http://xxh.cn/wpspreview/Content/20191111A.txt",
+    "enableCopy": true,
+    "watermarkType": 1,
+    "watermark": "啦啦啦啦啦",
+    "watermarkSetting": {
+      "width": 195,
+      "height": 170,
+      "fillstyle": "rgba( 192, 192, 192, 0.6 )",
+      "font": "bold 20px Serif",
+      "rotate": 45
+    },
+    "enablePrint": true,
+    "enableScreenShot": true,
+    "size": 100
+  }
+}
+         */
+
+        /// <summary>
+        /// 访问示例：http://xxh.cn/wpspreview/v1/3rd/MyPostPreview?fname=20181220A.txt
+        /// </summary>
+        [HttpGet]
+        [Route(Name = "3rd")]
+        public ActionResult MyPostPreview(string fname)
+        {
+            var request = System.Web.HttpContext.Current.Request;
+
+            // 构造文件信息参数
+            Models.postPreview m = new Models.postPreview();
+            m.password = "";
+            m.fileInfo3rd.fname = request["fname"].ToString();
+            m.fileInfo3rd.uniqueId = DateTime.Now.ToTimestamp().ToString();
+            m.fileInfo3rd.getFileWay = "download";
+            m.fileInfo3rd.url = "http://192.168.43.33/wpspreview/Content/" + fname;
+            m.fileInfo3rd.watermarkType = 1;
+            m.fileInfo3rd.watermark = "测试水印1";
+            m.fileInfo3rd.watermarkSetting = new Models.WatermarkSetting()
+            {
+                width = 0,
+                height = 0,
+                fillstyle = "rgba(255,0,0,0.6)",
+                font = "bold 16px Serif",
+                rotate = (float)(-Math.PI / 4)
+            };
+
+            // 这是在线预览服务端地址
+            string serverUrl = "http://10.13.83.55:8237/v1/view/preview?showcomments=false";
+            string jsonStr = m.ToJson();
+
+            // 发送post请求
+            HttpWebRequest httpWebRequest = (HttpWebRequest)HttpWebRequest.Create(serverUrl);
+            //参数类型，这里是json类型
+            httpWebRequest.ContentType = "application/json";
+            //字符串转换为字节码
+            byte[] bs = Encoding.UTF8.GetBytes(jsonStr);
+            httpWebRequest.ContentLength = bs.Length;
+            httpWebRequest.Method = "POST";
+            httpWebRequest.Timeout = 20000;
+            httpWebRequest.GetRequestStream().Write(bs, 0, bs.Length);
+            HttpWebResponse httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+            //读取返回数据
+            StreamReader streamReader = new StreamReader(httpWebResponse.GetResponseStream(), Encoding.UTF8);
+            string responseContent = streamReader.ReadToEnd();
+            streamReader.Close();
+            streamReader.Dispose();
+            httpWebResponse.Close();
+            if(httpWebRequest != null)
+            {
+                httpWebRequest.Abort();
+            }
+
+            return Content(responseContent); //直接显示接收到的html页面
+        }
+
+
+        #endregion
+
+
 
 
     }
